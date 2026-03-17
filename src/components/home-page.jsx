@@ -6,21 +6,21 @@ const HomePage = () => {
   const words = [
     {
       text: "abhisekpanda.co.in",
-      className: "text-center font-sans text-5xl font-semibold tracking-tighter md:py-10 lg:text-8xl",
+      className: "text-center font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-semibold tracking-tighter",
     },
   ];
   return (
     <section
-      className={cn("flex h-full min-h-screen w-screen items-center justify-center overflow-hidden py-32")}
+      className={cn("flex h-full min-h-screen w-screen items-center justify-center overflow-hidden py-16 md:py-24 lg:py-32")}
     >
       <div className="container flex w-full flex-col items-center justify-center px-4">
         <TypewriterEffectSmooth
-          cursorClassName="h-22"
+          cursorClassName="h-8 sm:h-9 md:h-11 lg:h-15 xl:h-17 2xl:h-22"
           words={words}
         />
-        <div className="relative z-20 mt-10 flex w-full max-w-md justify-center">
-          <a href="http://github.com/Panda-Abhisek" target="_self" rel="noopener noreferrer">
-            <Button className="cursor-pointer h-10 rounded-xl">Here's my github profile</Button>
+        <div className="relative z-20 mt-6 md:mt-10 flex w-full max-w-xs sm:max-w-md justify-center">
+          <a href="http://github.com/Panda-Abhisek" target="_blank" rel="noopener noreferrer">
+            <Button className="cursor-pointer h-10 sm:h-12 px-4 sm:px-6 rounded-xl text-sm sm:text-base">Here's my github profile</Button>
           </a>
         </div>
       </div>
