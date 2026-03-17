@@ -8,8 +8,8 @@ export default function ModeToggle() {
 
   const isDark = theme === "dark"
 
-  const [playLight] = useSound('/sounds/switch-on.wav', { volume: 1 })
-  const [playDark] = useSound('/sounds/switch-on.wav', { volume: 1 })
+  const [playLight] = useSound('/sounds/switch-on.wav', { volume: 0.5 })
+  const [playDark] = useSound('/sounds/switch-on.wav', { volume: 0.5 })
 
   return (
     <div className="flex items-center gap-1 bg-background rounded-full p-1 border">
