@@ -58,17 +58,17 @@ export default function ModeToggle() {
         variant="ghost"
         size="icon"
         onClick={(e) => toggleTheme(e, "light")}
-        className={`transition-all rounded-full ${!isDark ? "bg-accent" : ""}`}
+        className={`transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] rounded-full ${!isDark ? "bg-accent scale-105" : ""}`}
       >
-        <Sun className={`h-5 w-5 ${!isDark ? "text-yellow-500" : "text-muted-foreground"}`} />
+        <Sun className={`h-5 w-5 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${!isDark ? "text-yellow-500 scale-110" : "text-muted-foreground scale-100"}`} />
       </Button>
       <Button
         variant="ghost"
         size="icon"
         onClick={(e) => toggleTheme(e, "dark")}
-        className={`transition-all rounded-full ${isDark ? "bg-accent" : ""}`}
+        className={`transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] rounded-full ${isDark ? "bg-accent scale-105" : ""}`}
       >
-        <Moon className={`h-5 w-5 ${isDark ? "text-slate-300" : "text-muted-foreground"}`} />
+        <Moon className={`h-5 w-5 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isDark ? "text-slate-300 scale-110" : "text-muted-foreground scale-100"}`} />
       </Button>
     </div>
   )
