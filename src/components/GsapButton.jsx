@@ -65,7 +65,8 @@ export default function GsapButton({ children, variant = 'outline', className, h
                     transform: 'translate(-50%, -50%)',
                     pointerEvents: 'none',
                     willChange: 'transform, opacity',
-                    backgroundColor: activeFillColor
+                    backgroundColor: activeFillColor,
+                    opacity: 0,
                 }}
             />
             <span className="btn-content relative z-10">{children}</span>
