@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
-import { RiGithubFill, RiLinkedinBoxFill } from "@remixicon/react";
+import { RiGithubFill, RiLinkedinBoxFill, RiLinkedinFill } from "@remixicon/react";
+import GsapButton from "./GsapButton";
 
 const HomePage = () => {
   const words = [
@@ -19,19 +19,26 @@ const HomePage = () => {
           cursorClassName="h-8 sm:h-9 md:h-11 lg:h-15 xl:h-17 2xl:h-22"
           words={words}
         />
-        <div className="relative z-20 mt-6 md:mt-10 flex gap-2 w-full max-w-xs sm:max-w-md justify-center">
-          <a href="https://github.com/Panda-Abhisek" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-300 cursor-pointer h-10 sm:h-12 px-4 sm:px-6 rounded-xl text-sm sm:text-base">
-              <RiGithubFill />
-              Github
-            </Button>
-          </a>
-          <a href="https://linkedin.com/in/abhisek-panda-" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-300 cursor-pointer h-10 sm:h-12 px-4 sm:px-6 rounded-xl text-sm sm:text-base">
-              <RiLinkedinBoxFill />
-              LinkedIn
-            </Button>
-          </a>
+        <div className="relative z-20 mt-6 md:mt-10 flex gap-4 w-full max-w-xs sm:max-w-md justify-center">
+          <GsapButton 
+            href="https://github.com/Panda-Abhisek" 
+            className="text-black hover:text-white dark:text-white transition-colors duration-300"
+            fillColor="rgba(6, 6, 6, 0.95)"
+            darkFillColor="rgba(75, 75, 75, 0.9)"
+            variant="outline"
+          >
+            <RiGithubFill className="inline-flex items-center mr-2" />
+            Github
+          </GsapButton>
+          <GsapButton 
+            href="https://linkedin.com/in/abhisek-panda-" 
+            className="text-black hover:text-white dark:text-white transition-colors duration-300"
+            fillColor="rgba(10, 102, 194, 1)"
+            variant="outline"
+          >
+            <RiLinkedinBoxFill className="inline-flex items-center mr-2" />
+            LinkedIN
+          </GsapButton>
         </div>
       </div>
     </section>

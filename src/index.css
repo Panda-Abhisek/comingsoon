@@ -28,6 +28,24 @@
   z-index: 1;
 }
 
+.gsap-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-fill {
+  background-color: var(--btn-fill-color, rgba(0, 47, 255, 0.918));
+}
+
+/* .dark .btn-fill {
+  --btn-fill-color: rgba(0, 47, 255, 0.918);
+} */
+
+.btn-content {
+  position: relative;
+  z-index: 1;
+}
+
 @theme {
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
