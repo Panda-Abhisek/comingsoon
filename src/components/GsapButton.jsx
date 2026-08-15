@@ -5,10 +5,11 @@ import { Button } from './ui/button';
 export default function GsapButton({ children, variant = 'outline', className, href, fillColor, darkFillColor }) {
     const fillRef = useRef(null);
     const btnRef = useRef(null);
-    const [isDark, setIsDark] = useState(false);
+    const [isDark, setIsDark] = useState(() =>
+        document.documentElement.classList.contains('dark')
+    );
 
     useEffect(() => {
-        setIsDark(document.documentElement.classList.contains('dark'));
         const observer = new MutationObserver(() => {
             setIsDark(document.documentElement.classList.contains('dark'));
         });
